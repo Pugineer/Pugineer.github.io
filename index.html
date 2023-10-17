@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+
+  <title>Chris's Portfolio Site</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link crossorigin="anonymous" href="/assets/styles/main.min.css" media="screen" rel="stylesheet" />
+</head>
+
+
+<body x-data="global()" x-init="themeInit()" :class="max-h-screen overflow-hidden relative" class="dark:bg-primary">
+
+  <div id="main">
+    <div class="container mx-auto">
+      <div class="lg:block pt-16">
+        <ul class="flex items-center justify-start">
+
+          <li class="group relative mr-6 mb-1">
+            <div
+              class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
+            </div>
+            <a href="/"
+              class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Home</a>
+          </li>
+
+          <li class="group relative mr-6 mb-1">
+            <div
+              class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
+            </div>
+            <a href="/resume.html"
+              class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="container mx-auto">
+      <div class="border-b border-grey-lighter py-16 lg:py-16">
+        <div class="flex items-center">
+          <img src="/assets/img/author.jpg" class="max-w-md w-1/3 md:w-1/3 rounded-full" alt="author" />
+          <div class="px-10">
+            <h1 class="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">
+              Hi, I’m Chris
+            </h1>
+            <p class="pt-3 font-body text-xl font-light text-primary dark:text-white">
+              A Software Engineer in Toronto.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-b border-grey-lighter py-8 lg:py-8">
+        <div class="flex items-center pb-6">
+          <img src="/assets/img/icon-story.png" alt="icon story" />
+          <h3 class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white">
+            My Story
+          </h3>
+        </div>
+        <div>
+          <p class="font-body font-light text-primary dark:text-white">
+            Allow me to introduce myself - a software engineer who recently settled in Toronto. I am specialized in
+            developing backend system, especially Spring Boot in Java.
+            <br />
+            <br />
+            I'm currently on the lookout for a Java developer role in the city, eager to apply my skills and
+            contribute to the local tech community.
+            <br />
+            <br />
+            I also run a sole-proprietorship software development company called <span class="font-bold">Pugineer
+              Studio.</span> I offer top-quality development services. If you need software solutions, feel free to
+            reach out!
+          </p>
+        </div>
+      </div>
+
+      <div class="py-8 lg:py-8">
+        <div class="flex items-center pb-6">
+          <img src="/assets/img/icon-story.png" alt="icon story" />
+          <h3 class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white">
+            My Tech Stack
+          </h3>
+        </div>
+        <div class="pt-8">
+          <div class="pb-8">
+            <span class="mb-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green">Backend
+              Development</span>
+            <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">
+              Spring Boot, Spring MVC, Spring Webflux, Spring Security, Spring OAuth2, Spring Cloud, Flask
+            </p>
+          </div>
+          <div class=" pb-8">
+            <span
+              class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue">Database</span>
+            <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">
+              MySQL, MariaDB, PostgreSQL, MongoDB, Redis
+            </p>
+          </div>
+          <div class=" pb-8">
+            <span class="mb-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow">Cloud
+              Computing</span>
+            <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">
+              EC2, EKS, Lambda, Route 53, S3, VPC, Cloud Run, Compute Engine
+            </p>
+          </div>
+          <div class=" pb-8">
+            <span
+              class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-red">DevOps</span>
+            <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">
+              Code Build, Code Deploy, Code Pipeline, Cloud Build
+              <br />
+              Docker, Kubernetes, Jenkins, Gerrit, Git, SVN
+            </p>
+          </div>
+          <div class="pb-8">
+            <span class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm">Message Queue</span>
+            <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">
+              Kafka, RabbitMQ
+            </p>
+          </div>
+          <div class="pb-8">
+            <span class="mb-4 inline-block rounded-full bg-green px-2 py-1 font-body text-sm text-white">Frontend
+              Development</span>
+            <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">
+              React.js, Next.js, TailwindCSS
+            </p>
+          </div>
+          <div class="pb-8">
+            <span class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm">Miscellaneous</span>
+            <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">
+              Payment System, E-commerce, GPT-4, Prompt Engineering, Milvus Vector Database, Python, Selenium
+              <br />
+              SWIFT Protocol, FIX Protocol, OMnet Protocol, Equity and derivatives trading implementation,
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="pb-16 lg:pb-20">
+        <div class="flex items-center pb-6">
+          <img src="/assets/img/icon-project.png" alt="icon story" />
+          <h3 class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white">
+            My Projects
+          </h3>
+        </div>
+        <div class="py-4 border-b border-grey-light">
+          <div class="rounded overflow-hidden shadow-lg">
+            <div class="flex justify-center bg-green-light">
+              <img src="./assets/img/jomud.png" alt="flipmen demo">
+            </div>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Jomud</div>
+              <p class="text-gray-700 text-base">
+                I am the backend lead and the co-founder of Jomud. The product Jomud is a AI assisted platform, who aims
+                to help talent create talior-made resumes and other documents when applying the job.
+              </p>
+            </div>
+            <div class="px-6 py-2">
+              <span class="inline-block bg-gray-200 rounded-full text-sm font-semibold text-gray-700 mr-2 mb-2">#Backend
+                Development #Spring Boot #Spring Security #MariaDB #EKS #GPT-4 #Vector Database #Milvus </span>
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-b border-grey-light">
+          <div class="rounded overflow-hidden shadow-lg">
+            <div class="flex justify-center bg-green-light">
+              <img src="./assets/img/cms.png" alt="flipmen demo">
+            </div>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Internal CMS + Payment System</div>
+              <p class="text-gray-700 text-base">
+                I built a Internal CMS for a medical company, allowing the employee to have extra control on their core
+                system. A payment system implemented by me is also integrated to the CMS for real money transaction.
+              </p>
+            </div>
+            <div class="px-6 py-2">
+              <span class="inline-block bg-gray-200 rounded-full text-sm font-semibold text-gray-700 mr-2 mb-2">#Backend
+                Development #Frontend Development #Spring Boot #Spring Security #MariaDB #React.js #Tailwindcss
+                #EC2</span>
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-b border-grey-light">
+          <div class="rounded overflow-hidden shadow-lg">
+            <div class="flex justify-center bg-green-light">
+              <img src="./assets/img/flipmen.gif" alt="flipmen demo">
+            </div>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Flipmen</div>
+              <p class="text-gray-700 text-base">
+                Flipmen is a Unity game that mocks the flipping bottle game in the real world. It was published to the App Store and Google Play Store.
+              </p>
+            </div>
+            <div class="px-6 py-2">
+              <span class="inline-block bg-gray-200 rounded-full text-sm font-semibold text-gray-700 mr-2 mb-2">#Game
+                Development #C#</span>
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-b border-grey-light">
+          <div class="rounded overflow-hidden shadow-lg">
+            <div class="flex justify-center bg-green-light">
+              <img src="./assets/img/trasy.png" alt="trasy demo">
+            </div>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Trasy</div>
+              <p class="text-gray-700 text-base">
+                Trasy is a second-hand item trading platform. Users will upload their own item to the platform.
+                Through the in-app chatroom, they can have the deal and exchange in the real life.
+              </p>
+            </div>
+            <div class="px-6 py-2">
+              <span class="inline-block bg-gray-200 rounded-full text-sm font-semibold text-gray-700 mr-2 mb-2">#IOS
+                Development #Swift #XCode #Firebase #GCP #System Design</span>
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-b border-grey-light">
+          <div class="rounded overflow-hidden shadow-lg">
+            <div class="flex justify-center bg-green-light">
+              <img src="./assets/img/eatMudHo.gif" alt="eatMudHo demo">
+            </div>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">EatMudHo</div>
+              <p class="text-gray-700 text-base">
+                EatMudHo is a catering application for the people who is lost in finding their meal. It allows user
+                find nearby restaurant or find resturant in a certain location.
+              </p>
+            </div>
+            <div class="px-6 py-2">
+              <span class="inline-block bg-gray-200 rounded-full text-sm font-semibold text-gray-700 mr-2 mb-2">#IOS
+                Development #Swift #XCode</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto">
+    <div class="flex flex-col items-center justify-between border-t border-grey-lighter py-10 sm:flex-row sm:py-12">
+      <div class="mr-auto flex flex-col items-center sm:flex-row">
+        <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
+          ©2023 Chris Lau.
+        </p>
+      </div>
+      <div class="mr-auto flex items-center pt-5 sm:mr-0 sm:pt-0">
+        <a href="https://github.com/Pugineer " target="_blank">
+          <img src="/assets/img/icon-github.png" alt="github" class="w-8 h-8" />
+        </a>
+
+
+        <a href="https://www.linkedin.com/in/chris-lau-5b6b96217/ " target="_blank">
+          <img src="/assets/img/icon-linkedin.png" alt="linkedin" class="w-8 h-8 ml-4" />
+        </a>
+
+        <a href="mailto:chrislau828@gmail.com" target="_blank">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="ml-4" height="48"
+            width="36" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z">
+            </path>
+          </svg>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
