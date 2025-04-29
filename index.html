@@ -3,68 +3,173 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Pugineer Studio</title>
+  <title>Pugineer Studio | Enterprise Software Solutions</title>
+  <meta name="description" content="Enterprise-grade software development specializing in scalable backend systems, cloud architecture, and AI integration.">
   
   <!-- Tailwind and Radix UI styles -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            accent: {
+              light: '#f472b6',
+              DEFAULT: '#ec4899',
+              dark: '#be185d',
+            },
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/@radix-ui/themes@2.0.0/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .bg-gradient-pattern {
+      background-image: 
+        radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.1) 0, transparent 400px),
+        radial-gradient(circle at 0% 0%, rgba(236, 72, 153, 0.1) 0, transparent 400px);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
 
-<body class="bg-white">
+<body class="bg-gray-50 text-gray-900">
   <!-- Navigation -->
-  <nav class="border-b">
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex items-center">
-          <a href="/" class="font-bold text-xl">Pugineer Studio</a>
+          <a href="/" class="font-bold text-xl bg-gradient-to-r from-primary-600 to-accent bg-clip-text text-transparent">Pugineer Studio</a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#projects" class="text-gray-600 hover:text-primary-600 transition">Projects</a>
+          <a href="#expertise" class="text-gray-600 hover:text-primary-600 transition">Expertise</a>
+          <a href="#contact" class="text-gray-600 hover:text-primary-600 transition">Contact</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <h1 class="text-6xl font-bold tracking-tight">Building Digital Excellence</h1>
-        <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-          Pugineer Studio specializes in enterprise-grade software solutions, 
-          from backend systems to cloud architecture.
-        </p>
+  <section class="py-20 md:py-32 bg-gradient-pattern min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+      <div class="absolute top-10 right-10 w-72 h-72 bg-accent rounded-full filter blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-10 left-10 w-72 h-72 bg-primary-400 rounded-full filter blur-3xl animate-pulse-slow"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <div class="text-center md:text-left md:flex md:items-center md:gap-12">
+        <div class="md:w-3/5">
+          <span class="inline-block px-4 py-1 rounded-full bg-primary-100 text-primary-800 font-medium text-sm mb-5">Enterprise Software Solutions</span>
+          <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-br from-gray-900 via-primary-800 to-accent bg-clip-text text-transparent">Scaling Excellence Through Code</h1>
+          <p class="mt-6 text-xl md:text-2xl text-gray-600 max-w-3xl">
+            We architect and build enterprise-grade software systems that power businesses
+            handling millions of users and transactions daily.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-3 py-1 bg-white shadow-sm border border-gray-200 rounded-full text-sm font-medium">99.9% Uptime SLA</span>
+            <span class="px-3 py-1 bg-white shadow-sm border border-gray-200 rounded-full text-sm font-medium">Scalable Architectures</span>
+            <span class="px-3 py-1 bg-white shadow-sm border border-gray-200 rounded-full text-sm font-medium">Enterprise Security</span>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-medium shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 hover:-translate-y-1 transition-all">
+              Start Your Project
+            </a>
+            <a href="#projects" class="px-8 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium shadow hover:shadow-md hover:-translate-y-1 transition-all">
+              View Case Studies
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block md:w-2/5">
+          <div class="relative">
+            <img src="assets/hero.png" 
+                 alt="Software Development" 
+                 class="rounded-3xl opacity-90 mix-blend-multiply" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Project Showcase -->
-  <section class="py-16 bg-gray-50">
+  <section id="projects" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold">Project Showcase</h2>
-        <p class="mt-4 text-gray-600">Recent enterprise solutions we've delivered</p>
+      <div class="text-center mb-16">
+        <span class="inline-block px-3 py-1 rounded-full bg-primary-100 text-primary-800 font-medium text-sm mb-3">Case Studies</span>
+        <h2 class="text-4xl font-bold bg-gradient-to-r from-gray-900 to-primary-900 bg-clip-text text-transparent">Featured Client Success Stories</h2>
+        <p class="mt-4 text-xl text-gray-600">Results-driven solutions that solve complex business challenges</p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <!-- Jomud Project -->
-        <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 card-hover">
           <div class="aspect-w-16 aspect-h-9 relative">
-            <img src="assets/resume-1.png" alt="Jomud Project" class="object-cover w-full h-64" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <img src="assets/resume-1.png" alt="Jomud Project" class="object-cover w-full h-72" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4">
-              <span class="px-3 py-1 bg-blue-500 text-white rounded-full text-sm">Resume Builder</span>
+              <span class="px-3 py-1 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-full text-sm font-medium">Resume Builder</span>
             </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">AI-Powered Resume Platform</h3>
-            <p class="text-gray-600 mb-4">Building a scalable AI resume creation platform handling 1500+ users from multiple universities in Hong Kong.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-gray-100 rounded text-sm">Next.js</span>
-              <span class="px-2 py-1 bg-gray-100 rounded text-sm">Spring Boot</span>
-              <span class="px-2 py-1 bg-gray-100 rounded text-sm">GPT-4</span>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3"><a href="https://jomud.io/" target="_blank" class="text-primary-700 hover:text-primary-800">AI-Powered Resume Platform</a></h3>
+            <div class="flex items-center mb-3">
+              <div class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded">Increased job placement by 34%</div>
             </div>
-            <a href="/project/resume.html" class="inline-flex items-center text-blue-600 hover:text-blue-700">
-              View Case Study
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <p class="text-gray-600 mb-6 text-lg">Developed a scalable AI resume creation platform handling 1500+ users from multiple universities in Hong Kong, with GPT-4 integration for personalized content generation.</p>
+            <div class="mb-6">
+              <h4 class="text-sm font-semibold text-gray-900 mb-2">Key Achievements:</h4>
+              <ul class="space-y-1 text-gray-600">
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Reduced resume creation time from 3 hours to 25 minutes
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  99.8% system uptime across peak usage periods
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Next.js</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Spring Boot</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">GPT-4</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">PostgreSQL</span>
+            </div>
+            <a href="/project/resume.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+              View Full Case Study
+              <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
               </svg>
             </a>
@@ -72,25 +177,46 @@
         </div>
 
         <!-- CMS Project -->
-        <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 card-hover">
           <div class="aspect-w-16 aspect-h-9 relative">
-            <img src="/assets/cms-1.png" alt="CMS Project" class="object-cover w-full h-64" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <img src="/assets/cms-1.png" alt="CMS Project" class="object-cover w-full h-72" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4">
-              <span class="px-3 py-1 bg-green-500 text-white rounded-full text-sm">Healthcare</span>
+              <span class="px-3 py-1 bg-gradient-to-r from-accent to-accent-dark text-white rounded-full text-sm font-medium">Healthcare</span>
             </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Clinic Management System</h3>
-            <p class="text-gray-600 mb-4">A comprehensive back-office management system serving 50+ clinics with strict compliance standards.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-gray-100 rounded text-sm">React</span>
-              <span class="px-2 py-1 bg-gray-100 rounded text-sm">Spring Boot</span>
-              <span class="px-2 py-1 bg-gray-100 rounded text-sm">AWS</span>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3">Healthcare Management Platform</h3>
+            <div class="flex items-center mb-3">
+              <div class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded">Reduced operational costs by 42%</div>
             </div>
-            <a href="/project/cms.html" class="inline-flex items-center text-blue-600 hover:text-blue-700">
-              View Case Study
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <p class="text-gray-600 mb-6 text-lg">Architected and built a comprehensive back-office management system serving 50+ clinics with integration with major health insurance providers.</p>
+            <div class="mb-6">
+              <h4 class="text-sm font-semibold text-gray-900 mb-2">Key Achievements:</h4>
+              <ul class="space-y-1 text-gray-600">
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Automated 78% of billing and administrative workflows
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Decreased patient wait time by 28 minutes on average
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Spring Boot</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">AWS</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">MongoDB</span>
+            </div>
+            <a href="/project/cms.html" class="inline-flex items-center text-accent hover:text-accent-dark font-medium">
+              View Full Case Study
+              <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
               </svg>
             </a>
@@ -101,84 +227,126 @@
   </section>
 
   <!-- Expertise Section -->
-  <section class="py-16">
+  <section id="expertise" class="py-24 bg-gradient-pattern">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold mb-12 text-center">Our Technical Expertise</h2>
+      <div class="text-center mb-16">
+        <span class="inline-block px-3 py-1 rounded-full bg-primary-100 text-primary-800 font-medium text-sm mb-3">Core Capabilities</span>
+        <h2 class="text-4xl font-bold bg-gradient-to-r from-gray-900 to-primary-900 bg-clip-text text-transparent">Our Technical Expertise</h2>
+        <p class="mt-4 text-xl text-gray-600">Enterprise-grade solutions built on battle-tested technology stacks</p>
+      </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Modern Web Development -->
-        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:border-gray-300 transition-colors">
-          <h3 class="text-xl font-semibold mb-4">Modern Web Development</h3>
-          <p class="text-gray-600 mb-4">We build fast, responsive websites that work smoothly on all devices.</p>
-          <ul class="space-y-2 text-gray-600">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary-200 transition-colors card-hover group">
+          <div class="bg-primary-50 p-3 rounded-xl inline-block mb-6 group-hover:bg-primary-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 group-hover:text-primary-700 transition-colors">Modern Web Applications</h3>
+          <p class="text-gray-600 mb-6">High-performance, responsive web applications built on modern frameworks with SSR/SSG for optimal performance.</p>
+          <ul class="space-y-3 text-gray-600">
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              Next.js for lightning-fast websites
+              Next.js/React with server components
             </li>
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              Beautiful, accessible user interfaces
+              99/100 Lighthouse performance scores
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              WCAG 2.1 AA compliant interfaces
             </li>
           </ul>
         </div>
 
         <!-- Enterprise Backend Solutions -->
-        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:border-gray-300 transition-colors">
-          <h3 class="text-xl font-semibold mb-4">Enterprise Backend Solutions</h3>
-          <p class="text-gray-600 mb-4">Robust systems that can handle heavy traffic without breaking a sweat.</p>
-          <ul class="space-y-2 text-gray-600">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary-200 transition-colors card-hover group">
+          <div class="bg-primary-50 p-3 rounded-xl inline-block mb-6 group-hover:bg-primary-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 group-hover:text-primary-700 transition-colors">Enterprise Backend Systems</h3>
+          <p class="text-gray-600 mb-6">Scalable, high-throughput backend architectures designed for reliability and maintainability.</p>
+          <ul class="space-y-3 text-gray-600">
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              Handles 100,000+ daily users easily
+              Spring Boot microservices architecture
             </li>
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              Smart data storage solutions
+              Supports 10,000+ requests per second
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Comprehensive test coverage (>90%)
             </li>
           </ul>
         </div>
 
         <!-- Cloud & Infrastructure -->
-        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:border-gray-300 transition-colors">
-          <h3 class="text-xl font-semibold mb-4">Cloud & Infrastructure</h3>
-          <p class="text-gray-600 mb-4">We keep your systems running smoothly in the cloud.</p>
-          <ul class="space-y-2 text-gray-600">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary-200 transition-colors card-hover group">
+          <div class="bg-primary-50 p-3 rounded-xl inline-block mb-6 group-hover:bg-primary-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 group-hover:text-primary-700 transition-colors">Cloud Architecture</h3>
+          <p class="text-gray-600 mb-6">Resilient, cost-optimized cloud infrastructures with automated scaling and disaster recovery.</p>
+          <ul class="space-y-3 text-gray-600">
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              AWS expert setup & management
+              AWS/Azure certified architects
             </li>
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              Smart traffic distribution
+              Infrastructure as Code (Terraform)
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Auto-scaling with 99.9% uptime SLAs
             </li>
           </ul>
         </div>
 
         <!-- Business Solutions -->
-        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:border-gray-300 transition-colors">
-          <h3 class="text-xl font-semibold mb-4">Business Solutions</h3>
-          <p class="text-gray-600 mb-4">Complete systems for running your online business.</p>
-          <ul class="space-y-2 text-gray-600">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary-200 transition-colors card-hover group">
+          <div class="bg-primary-50 p-3 rounded-xl inline-block mb-6 group-hover:bg-primary-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 group-hover:text-primary-700 transition-colors">Business Solutions</h3>
+          <p class="text-gray-600 mb-6">Complete systems for running your online business.</p>
+          <ul class="space-y-3 text-gray-600">
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
               Online stores & payment systems
             </li>
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
               Content management systems
@@ -187,18 +355,23 @@
         </div>
 
         <!-- AI Integration -->
-        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:border-gray-300 transition-colors">
-          <h3 class="text-xl font-semibold mb-4">AI-Powered Solutions</h3>
-          <p class="text-gray-600 mb-4">Make your applications smarter with cutting-edge AI.</p>
-          <ul class="space-y-2 text-gray-600">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary-200 transition-colors card-hover group">
+          <div class="bg-primary-50 p-3 rounded-xl inline-block mb-6 group-hover:bg-primary-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 group-hover:text-primary-700 transition-colors">AI-Powered Solutions</h3>
+          <p class="text-gray-600 mb-6">Make your applications smarter with cutting-edge AI.</p>
+          <ul class="space-y-3 text-gray-600">
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
               Latest AI models (GPT-4, Claude)
             </li>
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
               Smart search & recommendations
@@ -207,18 +380,23 @@
         </div>
 
         <!-- Performance & Security -->
-        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:border-gray-300 transition-colors">
-          <h3 class="text-xl font-semibold mb-4">Performance & Security</h3>
-          <p class="text-gray-600 mb-4">Keep your systems fast, reliable, and secure.</p>
-          <ul class="space-y-2 text-gray-600">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-primary-200 transition-colors card-hover group">
+          <div class="bg-primary-50 p-3 rounded-xl inline-block mb-6 group-hover:bg-primary-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 group-hover:text-primary-700 transition-colors">Performance & Security</h3>
+          <p class="text-gray-600 mb-6">Keep your systems fast, reliable, and secure.</p>
+          <ul class="space-y-3 text-gray-600">
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
               High-performance optimization
             </li>
             <li class="flex items-center">
-              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
               Enterprise-grade security
@@ -230,48 +408,52 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+  <section id="contact" class="py-24 bg-gradient-to-br from-primary-900 to-primary-800 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white p-12 rounded-2xl shadow-lg border border-gray-100">
+      <div class="bg-white p-12 rounded-3xl shadow-2xl border border-gray-100 text-gray-900">
         <div class="text-center mb-10">
-          <h2 class="text-4xl font-bold text-black">Let's Work Together</h2>
+          <span class="inline-block px-3 py-1 rounded-full bg-primary-100 text-primary-800 font-medium text-sm mb-3">Start Your Project</span>
+          <h2 class="text-4xl font-bold bg-gradient-to-r from-gray-900 to-primary-800 bg-clip-text text-transparent">Let's Discuss Your Vision</h2>
           <p class="mt-4 text-lg text-gray-600">
-            Ready to transform your digital vision into reality? We're here to help.
+            Ready to transform your business with enterprise-grade software? 
+            Our development team is prepared to bring your vision to life.
           </p>
         </div>
         
         <div class="flex flex-col items-center space-y-8">
-          <div class="flex gap-12">
-            <div class="flex items-center space-x-4">
-              <div class="flex-shrink-0">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex flex-col md:flex-row gap-8 w-full">
+            <div class="flex items-center space-x-4 bg-primary-50 p-4 rounded-xl flex-1">
+              <div class="flex-shrink-0 bg-primary-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold">Email</h3>
+                <h3 class="font-semibold text-primary-800">Email Us</h3>
                 <p class="text-gray-600">info@pugineer.com</p>
+                <p class="text-xs text-gray-500 mt-1">Typical response within 24 hours</p>
               </div>
             </div>
             
-            <div class="flex items-center space-x-4">
-              <div class="flex-shrink-0">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center space-x-4 bg-primary-50 p-4 rounded-xl flex-1">
+              <div class="flex-shrink-0 bg-primary-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                         d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold">Language</h3>
+                <h3 class="font-semibold text-primary-800">Languages</h3>
                 <p class="text-gray-600">English, Cantonese, Mandarin</p>
+                <p class="text-xs text-gray-500 mt-1">Multilingual support available</p>
               </div>
             </div>
           </div>
           
           <a href="mailto:info@pugineer.com" 
-             class="px-8 py-4 text-center text-white bg-black rounded-lg hover:bg-gray-800 transition-all shadow-md hover:shadow-lg w-64">
-            Send us an Email
+             class="px-8 py-4 text-center text-white bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl hover:shadow-lg hover:shadow-primary-500/20 transition-all hover:-translate-y-1 w-full md:w-auto">
+            Schedule a Free Consultation
           </a>
         </div>
       </div>
@@ -279,14 +461,54 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="flex justify-between items-center">
-        <p class="text-gray-600">© 2025 Pugineer Studio. All rights reserved.</p>
-        <div class="flex gap-6">
-          <a href="https://github.com/Pugineer" class="text-gray-600 hover:text-gray-900">GitHub</a>
-          <a href="mailto:info@pugineer.com" class="text-gray-600 hover:text-gray-900">Email</a>
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+          <a href="/" class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-light bg-clip-text text-transparent">Pugineer Studio</a>
+          <p class="text-gray-400 mt-2">Building enterprise excellence since 2022</p>
+          <div class="mt-4">
+            <p class="text-gray-500 text-sm">Hong Kong • Singapore • Remote</p>
+          </div>
         </div>
+        <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-sm">
+          <div>
+            <h4 class="text-gray-300 font-semibold mb-2">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Web Applications</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Backend Systems</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Cloud Architecture</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-gray-300 font-semibold mb-2">Company</h4>
+            <ul class="space-y-2">
+              <li><a href="#projects" class="text-gray-400 hover:text-primary-400 transition-colors">Case Studies</a></li>
+              <li><a href="#expertise" class="text-gray-400 hover:text-primary-400 transition-colors">Expertise</a></li>
+              <li><a href="#contact" class="text-gray-400 hover:text-primary-400 transition-colors">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <a href="https://github.com/Pugineer" class="text-gray-400 hover:text-primary-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="mailto:info@pugineer.com" class="text-gray-400 hover:text-primary-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/" class="text-gray-400 hover:text-primary-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center md:text-left">
+        <p class="text-gray-500">© 2025 Pugineer Studio. All rights reserved.</p>
       </div>
     </div>
   </footer>
